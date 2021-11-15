@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "./components/pages/index.vue";
 import Profile from "./components/pages/profile.vue";
 import Class from "./components/pages/class.vue";
-import messageBoard from "./components/pages/messageBoard.vue";
+import message from "./components/pages/message.vue";
 import Login from "./components/pages/login.vue";
 
 const routes = [
@@ -25,9 +25,9 @@ const routes = [
   },
 
   {
-    path: "/MessageBoard",
-    name: "MessageBoard",
-    component: messageBoard,
+    path: "/message",
+    name: "message",
+    component: message,
   },
 
   {

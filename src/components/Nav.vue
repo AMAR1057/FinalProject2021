@@ -6,51 +6,61 @@
       </h1>
       <nav>
         <ul class="flex space-x-4 w-full">
-          <li
-            class="
-              py-8
-              px-4
-              hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
-            "
+          <router-link to="/">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
+              "
+            >
+              Home
+            </li>
+          </router-link>
+          <router-link :to="{ name: 'Profile' }">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
+              "
+            >
+              Profile
+            </li>
+          </router-link>
+          <router-link :to="{ name: 'class' }">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
+              "
+            >
+              Class Information
+            </li></router-link
           >
-            <router-link to="/">Home</router-link>
-          </li>
-          <li
-            class="
-              py-8
-              px-4
-              hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
-            "
-          >
-            <router-link to="/Profile">Profile</router-link>
-          </li>
-          <li
-            class="
-              py-8
-              px-4
-              hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
-            "
-          >
-            <router-link to="/class">Class Information</router-link>
-          </li>
-          <li
-            class="
-              py-8
-              px-4
-              hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
-            "
-          >
-            <router-link to="/messageBoard">Message Board</router-link>
-          </li>
-          <li
-            class="
-              py-8
-              px-4
-              hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
-            "
-          >
-            <router-link to="/Login">Log in</router-link>
-          </li>
+          <router-link to="/message">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
+              "
+            >
+              Message Board
+            </li>
+          </router-link>
+          <router-link to="/Login">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-yellow-100 hover:text-yellow-400
+              "
+            >
+              Log in
+            </li>
+          </router-link>
         </ul>
       </nav>
     </div>
