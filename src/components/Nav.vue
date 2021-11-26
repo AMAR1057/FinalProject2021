@@ -1,3 +1,14 @@
+<script setup>
+import { useRouter } from "vue-router";
+import useAuth from "../composable/useAuth";
+const { isAuthenticated, logout } = useAuth();
+const router = useRouter();
+const loggingOut = () => {
+  logout();
+  router.push("/");
+};
+</script>
+
 <template>
   <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ...">
     <div class="container mc-auto flex items-center justify-between">
