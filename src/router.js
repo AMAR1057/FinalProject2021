@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import useAuth from "./composable/useAuth";
 import Index from "./components/pages/index.vue";
-import Profile from "./components/pages/profile.vue";
+import Profile from "./components/pages/Profile.vue";
 import Class from "./components/pages/class.vue";
 import About from "./components/pages/about.vue";
 import Login from "./components/pages/login.vue";
