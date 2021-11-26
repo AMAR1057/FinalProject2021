@@ -8,3 +8,12 @@ import Nav from "./components/Nav.vue";
     <router-view />
   </div>
 </template>
+
+<style>
+#app {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  -webkit-font-smothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(22, 22, 18);
+}
+</style>
