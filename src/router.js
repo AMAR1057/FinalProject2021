@@ -4,7 +4,7 @@ import Index from "./components/pages/index.vue";
 import Profile from "./components/pages/Profile.vue";
 import Class from "./components/pages/class.vue";
 import About from "./components/pages/about.vue";
-import Login from "./components/pages/login.vue";
+import Login from "./components/pages/Login.vue";
 
 const { isAuthenticated } = useAuth();
 
