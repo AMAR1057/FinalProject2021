@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import useAuth from "../../composable/useAuth";
+const { isAuthenticated, user } = useAuth();
+</script>
 
 <template>
   <div
@@ -10,9 +13,17 @@
       min-h-screen-nonav
     "
   >
-    <h2 class="text-6xl tracking-tighter font-extralight">
+    <h2
+      v-if="!isAuthenticated"
+      class="text-6xl tracking-tighter font-extralight"
+    >
       Welcome, please log in
     </h2>
+
+    <h2 v-else class="text-6xl tracking-tighter font-extralight">
+      Welcome {{ user }}
+    </h2>
     <img src="../../assets/logo.png" alt="logo" />
+    <p>LLC 2021</p>
   </div>
 </template>

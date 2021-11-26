@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import useAuth from "./composable/useAuth";
 import Index from "./components/pages/index.vue";
 import Profile from "./components/pages/profile.vue";
 import Class from "./components/pages/class.vue";
-import message from "./components/pages/message.vue";
+import About from "./components/pages/about.vue";
 import Login from "./components/pages/login.vue";
+
+const { isAuthenticated } = useAuth();
 
 const routes = [
   {
@@ -22,12 +24,20 @@ const routes = [
     path: "/class",
     name: "class",
     component: Class,
+    component: Class,
+    beforeEnter: (to, from, next) => {
+      console.log(isAuthenticated);
+      if (!isAuthenticated.value) {
+        next("/login");
+      }
+      next();
+    },
   },
 
   {
-    path: "/message",
-    name: "message",
-    component: message,
+    path: "/about",
+    name: "about",
+    component: About,
   },
 
   {

@@ -3,12 +3,26 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import useAuth from "../../composable/useAuth";
 import useError from "../../composable/useError";
-const { isAuthenticated, login } = useAuth();
+
+const { isAuthenticated, login, signup, googleLogin } = useAuth();
 const username = ref("");
 const password = ref("");
 const router = useRouter();
+
 const logginIn = async () => {
   await login(username.value, password.value);
+  goToHome();
+};
+const signingUp = async () => {
+  await signup(username.value, password.value);
+  goToHome();
+};
+const google = async () => {
+  await googleLogin();
+  goToHome();
+};
+
+const goToHome = () => {
   if (isAuthenticated.value) {
     router.push("/");
   } else {
@@ -16,6 +30,7 @@ const logginIn = async () => {
     start();
   }
 };
+
 const { error, setError } = useError();
 import { useTimeout, promiseTimeout } from "@vueuse/core";
 const { ready, start } = useTimeout(3000, { controls: true });
@@ -56,12 +71,29 @@ const { ready, start } = useTimeout(3000, { controls: true });
           placeholder="Password"
           v-model="password"
         />
+        <div class="flex space-x-2">
+          <button
+            type="submit"
+            @submit.prevent="logginIn"
+            class="w-1/2 py-2 text-yellow-900 bg-yellow-500 rounded-lg"
+          >
+            Login
+          </button>
+          <button
+            @click="signingUp"
+            class="w-1/2 py-2 text-green-200 bg-green-600 rounded-lg"
+          >
+            Sign Up
+          </button>
+        </div>
         <button
-          type="submit"
-          @submit.prevent="logginIn"
-          class="py-2 text-indigo-200 bg-yellow-500 rounded-lg"
+          @click="google"
+          class="flex justify-center py-2 bg-white rounded-lg hover:bg-gray-300"
         >
-          Login
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt=""
+          />
         </button>
       </form>
     </div>
