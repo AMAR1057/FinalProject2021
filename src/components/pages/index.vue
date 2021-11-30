@@ -15,7 +15,7 @@ const { isAuthenticated, user } = useAuth();
   >
     <h2
       v-if="!isAuthenticated"
-      class="text-6xl tracking-tighter font-extralight"
+      class="text-6xl tracking-tighter font-extralight text-red-700"
     >
       Welcome, please log in
     </h2>

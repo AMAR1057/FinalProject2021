@@ -1,6 +1,8 @@
 <template>
-  <h1 class="text-2xl font-extrabold ">About us</h1>
-  <div class="">
+  <h1 class="text-4xl font-extrabold text-red-400 text-center">About us</h1>
+
+
+  <div class=" text-red-700 font-semibold">
     <p>
       Welcome to myGrade+, your number one source for all things related to your
       kids' school information. We're dedicated to providing you the very best
@@ -13,4 +15,9 @@
       <p>Sincerely, Aline Martinez </p>
     </p>
   </div>
+
+  <div class="">
+  <img  src="../../assets/logo.png" alt="logo">
+  
+</div>
 </template>

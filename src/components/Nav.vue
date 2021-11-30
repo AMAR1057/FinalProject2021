@@ -29,7 +29,7 @@ const loggingOut = () => {
               Home
             </li>
           </router-link>
-          <router-link :to="{ name: 'Profile' }">
+          <router-link to="/class">
             <li
               class="
                 py-8
