@@ -1,10 +1,16 @@
 <script setup>
 import { onUnmounted, ref } from "vue";
 import useChat from "../../composable/useChat";
+import useAuth from "../../composable/useAuth";
 
-const { messages, unsubscribe } = useChat();
+const { messages, unsubscribe, sendMessage } = useChat();
+const { user } = useAuth();
 
 const newMessage = ref("");
+const send = () => {
+  sendMessage(newMessage.value);
+  newMessage.value = "";
+};
 
 onUnmounted(() => {
   unsubscribe();
@@ -76,7 +82,10 @@ onUnmounted(() => {
     />
     <ul class="text-center p-4 space-y-4">
       <li v-for="message in messages" :key="message.id">
-        <div class="flex justify-between bg-pink-200 px-4 py-2 rounded-lg">
+        <div
+          class="flex justify-between px-4 py-2 rounded-lg"
+          :class="user === message.author ? 'bg-pink-400' : 'bg-gray-200'"
+        >
           <span>{{ message.text }}</span
           ><span>by {{ message.author }}</span>
         </div>
@@ -88,6 +97,7 @@ onUnmounted(() => {
         type="text"
         placeholder="Type a message ..."
         v-model="newMessage"
+        @change="send"
       />
     </div>
   </div>
