@@ -1,3 +1,16 @@
+<script setup>
+import { onUnmounted, ref } from "vue";
+import useChat from "../../composable/useChat";
+
+const { messages, unsubscribe } = useChat();
+
+const newMessage = ref("");
+
+onUnmounted(() => {
+  unsubscribe();
+});
+</script>
+
 <template>
   <h1 class="text-6xl text-center text-red-500 font-extrabold">
     Student Profile
@@ -62,9 +75,10 @@
       alt="chat image"
     />
     <ul class="text-center p-4 space-y-4">
-      <li v-for="n in 5">
+      <li v-for="message in messages" :key="message.id">
         <div class="flex justify-between bg-pink-200 px-4 py-2 rounded-lg">
-          <span>Message</span><span>by Author Name</span>
+          <span>{{ message.text }}</span
+          ><span>by {{ message.author }}</span>
         </div>
       </li>
     </ul>
@@ -72,7 +86,8 @@
       <input
         class="w-full p-4 roundend-lg focus:outline-none focus:bg-yellow-200"
         type="text"
-        placeholder="Type a message"
+        placeholder="Type a message ..."
+        v-model="newMessage"
       />
     </div>
   </div>
