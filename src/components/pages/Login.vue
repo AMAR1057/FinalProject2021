@@ -58,10 +58,10 @@ const { ready, start } = useTimeout(3000, { controls: true });
       "
     >
       <img class="h-64" src="../../assets/logo.png" />
-      <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
+      <form @submit.prevent="logginIn" class="flex flex-col p- space-y-4">
         <input
           type="text"
-          class="p-2 border-2 rounded-lg"
+          class="p- border-2 rounded-lg"
           placeholder="Username"
           v-model="username"
         />

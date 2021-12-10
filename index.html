@@ -9,5 +9,28 @@
   <body class="bg-yellow-100 border-pink-400">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <div class="quote-box">
+        <p class="text-red-600" id="quote">"Click to get inspired!..."</p>
+        <small id="author"></small>
+      </div>
+      <button id="btn">New Quote</button>
+    </div>
+    <script>
+      const quote = document.querySelector("#quote");
+      const author = document.querySelector("#author");
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", getQuote);
+
+      function getQuote() {
+        fetch("http://api.quotable.io/random")
+          .then((res) => res.json())
+          .then((data) => {
+            quote.innerHTML = `"${data.content}"`;
+            author.innerHTML = data.author;
+          });
+      }
+    </script>
   </body>
 </html>

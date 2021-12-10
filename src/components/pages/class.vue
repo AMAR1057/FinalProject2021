@@ -5,11 +5,21 @@
     </h1>
     <table class="border-2 divide-purple-400">
       <div class="text-red-400 font-bold">
-        <div class="hover:bg-yellow-200">Math</div>
-        <div class="hover:bg-yellow-200">Language Arts</div>
-        <div class="hover:bg-yellow-200">Science</div>
-        <div class="hover:bg-yellow-200">Social Studies</div>
-        <div class="hover:bg-yellow-200">Physical Education</div>
+        <div class="hover:bg-yellow-200">
+          <a href="https://mrnussbaum.com/math/math-games">Math</a>
+        </div>
+        <div class="hover:bg-yellow-200">
+          <a href="https://mrnussbaum.com/math/lang-arts">Language Arts</a>
+        </div>
+        <div class="hover:bg-yellow-200">
+          <a href="https://mrnussbaum.com/science">Science</a>
+        </div>
+        <div class="hover:bg-yellow-200">
+          <a href="https://mrnussbaum.com/history">Social Studies</a>
+        </div>
+        <div class="hover:bg-yellow-200">
+          <a href="https://mrnussbaum.com/geography">Geography</a>
+        </div>
       </div>
     </table>
 

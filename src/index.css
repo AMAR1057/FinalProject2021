@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: helvetica;
+    font-size: 18px;
+  }
+  .container {
+    margin: 0px auto;
+    width: 600px;
+    display:flex;
+    flex-direction: column ;
+  }
+ 
+  
+  .quote-box {
+    border: 2px solid #ddd;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  #quote {
+    color: #444;
+    text-align: center;
+  }
+  #author {
+    float: right;
+    color: #888;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  #btn {
+    align-self: center;
+    border: 2px solid #666;
+    padding: 8px 4px;
+    text-transform: uppercase;
+    background-color: black;
+    color: rgb(214, 25, 25);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #btn:focus {
+    outline: none;
+  }
+  

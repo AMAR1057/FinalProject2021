@@ -18,7 +18,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <h1 class="text-6xl text-center text-red-500 font-extrabold">
+  <h1 class="text-4xl text-center text-red-500 font-extrabold">
     Student Profile
   </h1>
   <br />

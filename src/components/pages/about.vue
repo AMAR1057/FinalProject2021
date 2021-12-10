@@ -1,23 +1,54 @@
 <template>
   <h1 class="text-4xl font-extrabold text-red-400 text-center">About us</h1>
+  <br />
+  <br />
+  <div>
+    <div class="text-2xl text-black font-semibold text-center">
+      Our mission is to create an environment where students are inspired to be
+      their best.
+    </div>
+    <br />
+    <br />
+    <div class="text-red-500 font-extralight text-center">
+      We’re a team of engineers, educators, and lifelong learners who wake up
+      every day thinking about igniting students’ passion for learning and
+      solving the challenges teachers and administrators face in making it
+      happen.
+    </div>
 
+    <br />
+    <br />
+    <div class="text-4xl text-black font-semibold text-center">
+      Why myGrade+?
+    </div>
 
-  <div class=" text-red-700 font-semibold">
-    <p>
-      Welcome to myGrade+, your number one source for all things related to your
-      kids' school information. We're dedicated to providing you the very best
-      of and most accurate information. <p></p>Founded in 2021 by Aline Martinez,
-      myGrade+ has come a long way from its beginnings in a classroom.
-      When Aline first started out, her passion for myGrade+ drove <p></p>her to start her
-      own business. We hope you enjoy our products as much as we enjoy offering
-      them to you. If you have any questions or comments, please don't hesitate
-      to contact us. 
-      <p>Sincerely, Aline Martinez </p>
-    </p>
+    <br />
   </div>
 
-  <div class="">
-  <img  src="../../assets/logo.png" alt="logo">
-  
-</div>
+  <div class="text-black font-semibold text-center">
+    myGrade+ is used by over 10M teachers, students, and family members every
+    month across more than 75% of schools in the U.S.
+  </div>
+  <br />
+  <div class="text-red-500 font-extralight text-center">
+    myGrade+ is at the heart of the learning process for millions of students.
+    Our platform encourages creativity and feedback that makes students excited
+    to learn. Now more than ever, remote learning solutions are essential.
+    <p></p>
+    myGrade+ enables meaningful learning from anywhere, for every student.
+    <br />
+    <br />
+  </div>
+
+  <div class="flex flex-col items-center justify-center space-y-12">
+    <img
+      class=""
+      src="../../assets/logo.jpg "
+      alt="logo"
+      height="400"
+      width="400"
+    />
+  </div>
+  <br />
+  <br />
 </template>
